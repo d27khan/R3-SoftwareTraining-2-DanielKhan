@@ -8,11 +8,11 @@ HEIGHT = 800
 FPS = 30
 MARGIN = 50
 
-gridSize = 8 #input("Enter size, n (note it will be size n x n): ")
+gridSize = input("Enter size, n (note it will be size n x n): ")
 grid = []
 visited = []
 
-cellSize = WIDTH/gridSize ## 100 pixels
+cellSize = WIDTH/gridSize ## size of each box
 cellSize = math.floor(cellSize)
 
 
@@ -132,6 +132,8 @@ red = [255,0,0]
 blue = [0,0,255]
 screen.fill(white)
 
+# ---- start of prims algo ----
+
 startingCell = grid[random.randint(0,gridSize-1)][random.randint(0,gridSize-1)]
 startingCell.checkNeighbor()
 
@@ -158,6 +160,7 @@ while ( len(visited) != int(math.pow(len(grid),2))):
     
     visited.append(neighCell)
 
+#---- end of prims ---- 
 drawMaze()
 
 
