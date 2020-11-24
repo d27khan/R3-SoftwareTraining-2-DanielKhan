@@ -8,10 +8,10 @@ HEIGHT = 800
 FPS = 30
 MARGIN = 50
 
-gridSize = input("Enter size, n (note it will be size n x n): ")
+gridsize = input("Enter size, n (note it will be size n x n): ")
 grid = []
 visited = []
-
+gridSize = int(gridsize)
 cellSize = WIDTH/gridSize ## size of each box
 cellSize = math.floor(cellSize)
 
