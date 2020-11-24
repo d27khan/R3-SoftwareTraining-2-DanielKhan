@@ -1,0 +1,1 @@
+len(visited) != int(math.pow(len(grid),2))
