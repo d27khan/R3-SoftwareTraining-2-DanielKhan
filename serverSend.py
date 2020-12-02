@@ -2,10 +2,11 @@ import socket
 import datetime
 
 buffersize = 256
+#sending the position of the motor and which dir to travel in
 def sendPos(pathArr):
     
 
-
+   # adjusting the array to provide the string for the arduino motor
     if pathArr == "N":
         pathArr = "[255][0][255][0]"
     if pathArr== "S":
